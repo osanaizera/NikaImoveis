@@ -413,7 +413,7 @@ function PropostaPage() {
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://wa.me/5547999990000?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20a%20proposta."
+                  href="https://wa.me/5519989613455?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20a%20proposta."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
@@ -421,7 +421,7 @@ function PropostaPage() {
                   Aceitar proposta <ArrowRight size={14} />
                 </a>
                 <a
-                  href="https://wa.me/5547999990000?text=Ol%C3%A1!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20a%20proposta."
+                  href="https://wa.me/5519989613455?text=Ol%C3%A1!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20a%20proposta."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline"
