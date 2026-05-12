@@ -123,7 +123,7 @@ const investimento = [
   },
   {
     label: "Tráfego pago",
-    value: "R$ 1.247",
+    value: "R$ 980",
     period: "/mês",
     desc: "Gestão completa de campanhas Google Ads e Meta Ads, incluindo criação de criativos. Mídia indicativa ~R$ 1.800/mês (Google R$ 1.000 + Meta R$ 800), paga diretamente pela Nika às plataformas.",
     highlights: [
