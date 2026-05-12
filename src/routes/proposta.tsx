@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import {
   Globe,
   Rocket,
@@ -139,13 +140,25 @@ const investimento = [
 /* ─── Component ─── */
 
 function PropostaPage() {
+  useEffect(() => {
+    (window as any).__SD_SITE_ID__ = "2cKv0YlUoH2a";
+    const script = document.createElement("script");
+    script.src = "https://cms.draivv.com/proposal-telemetry.js";
+    script.defer = true;
+    document.head.appendChild(script);
+    return () => {
+      script.remove();
+      delete (window as any).__SD_SITE_ID__;
+    };
+  }, []);
+
   return (
     <>
       <Header />
 
       <main className="pt-32 pb-0">
         {/* HERO */}
-        <section className="container-luxe pb-20">
+        <section className="container-luxe pb-20" data-sd-section="hero">
           <Reveal>
             <span className="eyebrow inline-flex items-center gap-3">
               <span className="divider-gold" />
@@ -172,7 +185,7 @@ function PropostaPage() {
         </section>
 
         {/* SERVIÇO 1: SITE + SEO + MANUTENÇÃO */}
-        <section className="bg-cream border-t border-border py-24">
+        <section className="bg-cream border-t border-border py-24" data-sd-section="servico-site-seo">
           <div className="container-luxe">
             <Reveal>
               <div className="max-w-2xl mb-16">
@@ -213,7 +226,7 @@ function PropostaPage() {
         </section>
 
         {/* SERVIÇO 2: TRÁFEGO PAGO */}
-        <section className="py-24">
+        <section className="py-24" data-sd-section="servico-trafego-pago">
           <div className="container-luxe">
             <Reveal>
               <div className="max-w-2xl mb-16">
@@ -254,7 +267,7 @@ function PropostaPage() {
         </section>
 
         {/* INVESTIMENTO */}
-        <section className="bg-charcoal text-cream py-24">
+        <section className="bg-charcoal text-cream py-24" data-sd-section="precos">
           <div className="container-luxe">
             <Reveal>
               <div className="text-center max-w-2xl mx-auto mb-16">
@@ -334,7 +347,7 @@ function PropostaPage() {
         </section>
 
         {/* DIFERENCIAIS */}
-        <section className="py-24 border-b border-border">
+        <section className="py-24 border-b border-border" data-sd-section="diferenciais">
           <div className="container-luxe">
             <Reveal>
               <div className="text-center max-w-2xl mx-auto mb-16">
@@ -383,7 +396,7 @@ function PropostaPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-24">
+        <section className="py-24" data-sd-section="cta">
           <div className="container-luxe text-center max-w-2xl mx-auto">
             <Reveal>
               <span className="eyebrow">
