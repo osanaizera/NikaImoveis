@@ -24,6 +24,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-muted: var(--accent-muted);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -54,18 +56,20 @@
   --muted: oklch(0.94 0.01 80);
   --muted-foreground: oklch(0.45 0.015 60);
 
-  --accent: oklch(0.62 0.13 55);                  /* copper */
-  --accent-foreground: oklch(0.985 0.005 80);
+  --accent: oklch(0.66 0.17 47);                  /* brand orange — from logo */
+  --accent-foreground: oklch(0.99 0 0);
+  --accent-dark: oklch(0.56 0.16 45);             /* deep amber for hover */
+  --accent-muted: oklch(0.93 0.035 55);           /* warm tint for backgrounds */
 
-  --gold: oklch(0.72 0.12 75);                    /* warm gold */
-  --charcoal: oklch(0.18 0.012 60);
+  --gold: oklch(0.78 0.10 65);                    /* warm gold */
+  --charcoal: oklch(0.15 0.014 55);               /* rich deep charcoal */
   --cream: oklch(0.97 0.012 85);
 
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.88 0.012 70);
   --input: oklch(0.9 0.012 70);
-  --ring: oklch(0.62 0.13 55);
+  --ring: oklch(0.66 0.17 47);
 }
 
 .dark {
@@ -81,11 +85,13 @@
   --secondary-foreground: oklch(0.97 0.012 85);
   --muted: oklch(0.22 0.012 60);
   --muted-foreground: oklch(0.7 0.012 70);
-  --accent: oklch(0.68 0.13 55);
+  --accent: oklch(0.72 0.17 48);
   --accent-foreground: oklch(0.14 0.012 60);
+  --accent-dark: oklch(0.62 0.16 46);
+  --accent-muted: oklch(0.22 0.04 50);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.68 0.13 55);
+  --ring: oklch(0.72 0.17 48);
 }
 
 @layer base {
@@ -154,4 +160,7 @@
   .delay-300 { animation-delay: 300ms; }
   .delay-500 { animation-delay: 500ms; }
   .delay-700 { animation-delay: 700ms; }
+  .hero-text-shadow {
+    text-shadow: 0 2px 16px oklch(0 0 0 / 45%), 0 1px 3px oklch(0 0 0 / 35%);
+  }
 }

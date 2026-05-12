@@ -60,31 +60,52 @@ function Home() {
           height={1080}
           className="absolute inset-0 w-full h-full object-cover animate-hero-zoom"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/55 to-charcoal/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-charcoal/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 via-charcoal/15 to-transparent" />
 
-        <div className="container-luxe relative z-10 pb-28 pt-40 text-cream">
-          <div className="max-w-3xl">
-            <span className="eyebrow text-accent animate-rise">
-              <span className="divider-gold mr-3" />
-              Imóveis de altíssimo padrão · Santa Catarina
+        <div className="container-luxe relative z-10 pb-10 md:pb-44 pt-32 text-cream">
+          <div className="max-w-3xl md:border-l-2 border-accent/40 md:pl-8">
+            <span className="eyebrow text-accent animate-rise inline-flex items-center gap-3">
+              <span className="divider-gold" />
+              Curadoria imobiliária exclusiva
             </span>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] mt-6 leading-[1.02] animate-rise delay-150">
-              O endereço certo
+            <h1
+              className="font-display mt-5 leading-[1.05] animate-rise delay-150 hero-text-shadow"
+              style={{ fontSize: "clamp(2.6rem, 3.8vw, 5.2rem)" }}
+            >
+              Imóveis de alto padrão
               <br />
-              <em className="text-accent not-italic">para a sua próxima história.</em>
+              <span className="text-accent">em Santa Catarina.</span>
             </h1>
-            <p className="mt-8 text-lg text-cream/85 max-w-xl leading-relaxed font-light animate-rise delay-300">
-              Curadoria exclusiva de coberturas, residências frente mar e
-              empreendimentos assinados — com a discrição, o cuidado e a
-              consultoria que o seu patrimônio merece.
+            <p
+              className="mt-5 max-w-xl leading-relaxed font-light animate-rise delay-300 text-cream/90 hero-text-shadow"
+              style={{ fontSize: "clamp(0.92rem, 1vw, 1.1rem)" }}
+            >
+              Coberturas frente mar, residências assinadas e lançamentos
+              exclusivos em Balneário Camboriú, Itapema, Blumenau e litoral
+              catarinense — com a consultoria que o seu patrimônio exige.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4 animate-rise delay-500">
-              <Link to="/imoveis" className="btn-primary bg-accent hover:bg-cream hover:text-charcoal">
+            <div className="mt-7 flex flex-wrap gap-4 animate-rise delay-500">
+              <Link to="/imoveis" className="btn-primary bg-accent hover:bg-accent-dark">
                 Explorar portfólio <ArrowRight size={14} />
               </Link>
-              <WhatsAppButton variant="inline" label="Conversar no WhatsApp" />
+              <WhatsAppButton variant="inline" label="Fale com um consultor" />
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.65rem] uppercase tracking-[0.25em] text-cream/45 animate-rise delay-500">
+              <span className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent/60" />
+                +R$ 480M transacionados
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent/60" />
+                Litoral & Vale do Itajaí
+              </span>
+              <span className="hidden sm:flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent/60" />
+                Atendimento personalizado
+              </span>
             </div>
           </div>
         </div>
@@ -105,7 +126,7 @@ function Home() {
                 <option>Lançamento</option>
                 <option>Terreno</option>
               </select>
-              <Link to="/imoveis" className="btn-primary bg-accent hover:bg-charcoal">
+              <Link to="/imoveis" className="btn-primary bg-accent hover:bg-accent-dark">
                 <Search size={14} /> Pesquisar
               </Link>
             </div>

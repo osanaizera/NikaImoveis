@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VenderRouteImport } from './routes/vender'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as ScireRouteImport } from './routes/scire'
 import { Route as ImoveisRouteImport } from './routes/imoveis'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
@@ -24,6 +25,11 @@ const VenderRoute = VenderRouteImport.update({
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScireRoute = ScireRouteImport.update({
+  id: '/scire',
+  path: '/scire',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ImoveisRoute = ImoveisRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/imoveis': typeof ImoveisRoute
+  '/scire': typeof ScireRoute
   '/sobre': typeof SobreRoute
   '/vender': typeof VenderRoute
   '/imovel/$id': typeof ImovelIdRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/imoveis': typeof ImoveisRoute
+  '/scire': typeof ScireRoute
   '/sobre': typeof SobreRoute
   '/vender': typeof VenderRoute
   '/imovel/$id': typeof ImovelIdRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/imoveis': typeof ImoveisRoute
+  '/scire': typeof ScireRoute
   '/sobre': typeof SobreRoute
   '/vender': typeof VenderRoute
   '/imovel/$id': typeof ImovelIdRoute
@@ -78,16 +87,25 @@ export interface FileRouteTypes {
     | '/'
     | '/contato'
     | '/imoveis'
+    | '/scire'
     | '/sobre'
     | '/vender'
     | '/imovel/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/imoveis' | '/sobre' | '/vender' | '/imovel/$id'
+  to:
+    | '/'
+    | '/contato'
+    | '/imoveis'
+    | '/scire'
+    | '/sobre'
+    | '/vender'
+    | '/imovel/$id'
   id:
     | '__root__'
     | '/'
     | '/contato'
     | '/imoveis'
+    | '/scire'
     | '/sobre'
     | '/vender'
     | '/imovel/$id'
@@ -97,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContatoRoute: typeof ContatoRoute
   ImoveisRoute: typeof ImoveisRoute
+  ScireRoute: typeof ScireRoute
   SobreRoute: typeof SobreRoute
   VenderRoute: typeof VenderRoute
   ImovelIdRoute: typeof ImovelIdRoute
@@ -116,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scire': {
+      id: '/scire'
+      path: '/scire'
+      fullPath: '/scire'
+      preLoaderRoute: typeof ScireRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/imoveis': {
@@ -153,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContatoRoute: ContatoRoute,
   ImoveisRoute: ImoveisRoute,
+  ScireRoute: ScireRoute,
   SobreRoute: SobreRoute,
   VenderRoute: VenderRoute,
   ImovelIdRoute: ImovelIdRoute,
