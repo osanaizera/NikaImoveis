@@ -123,16 +123,16 @@ const investimento = [
   },
   {
     label: "Tráfego pago",
-    value: "R$ 890",
+    value: "R$ 1.247",
     period: "/mês",
-    desc: "Gestão completa de campanhas Google e Meta Ads, incluindo criação de criativos. Orçamento de mídia à parte, custeado diretamente pela contratante.",
+    desc: "Gestão completa de campanhas Google Ads e Meta Ads, incluindo criação de criativos. Mídia indicativa ~R$ 1.800/mês (Google R$ 1.000 + Meta R$ 800), paga diretamente pela Nika às plataformas.",
     highlights: [
       "Google Ads e Meta Ads",
       "Criação de criativos inclusa",
       "Segmentação alto padrão",
       "Otimização contínua",
       "Relatórios de performance",
-      "Orçamento de mídia à parte*",
+      "Mídia paga direto às plataformas*",
     ],
   },
 ];
@@ -338,9 +338,9 @@ function PropostaPage() {
 
             <Reveal>
               <p className="text-xs text-cream/40 mt-8 text-center">
-                * O orçamento de mídia (valor investido diretamente em Google/Meta
-                para veicular os anúncios) é definido em conjunto e pago
-                diretamente pela contratante nas plataformas.
+                * Mídia indicativa de ~R$ 1.800/mês (Google R$ 1.000 + Meta R$ 800),
+                paga diretamente pela Nika às plataformas. O valor pode ser
+                ajustado conforme estratégia e resultados.
               </p>
             </Reveal>
           </div>
